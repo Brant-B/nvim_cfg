@@ -5,11 +5,11 @@
 使用NVIM的最小化的起点，根据自己需求再增加需要的功能。
 而不是不了解自己的需求，一股脑地使用别人的配置。
 
-## Installation
+## 安装
 
 
 
-### Install nvim_cfg
+### 安装 nvim_cfg
 
 > **NOTE**
 > [Backup] your previous configuration
@@ -50,14 +50,11 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
 ### FAQ
 
-* Why is the kickstart `init.lua` a single file? Wouldn't it make sense to split it into multiple files?
-  * The main purpose of kickstart is to serve as a teaching tool and a reference
-    configuration that someone can easily use to `git clone` as a basis for their own.
-    As you progress in learning Neovim and Lua, you might consider splitting `init.lua`
-    into smaller parts. A fork of kickstart that does this while maintaining the 
-    same functionality is available here:
-    * [kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvim)
-  * Discussions on this topic can be found here:
-    * [Restructure the configuration](https://github.com/nvim-lua/kickstart.nvim/issues/218)
-    * [Reorganize init.lua into a multi-file setup](https://github.com/nvim-lua/kickstart.nvim/pull/473)
-
+* 为什么我们的配置 `init.lua` 要设置为一个单独的文件呢？分成多个文件肯定会更好理解呀。
+   * 设置该起始nvim的目的就是作为一个教学工具
+   * 并作为一个参考设置，每个人都能很轻松`git clone` 下来，作为自己配置的基础
+   * 随着你慢慢学习 Neovim 和lua 语言，你就会考虑拆分`init.lua` 文件
+   * [kickstart-modular.nvim](https://github.com/dam9000/kickstart-modular.nvim)
+* Discussions on this topic can be found here:
+   * [Restructure the configuration](https://github.com/nvim-lua/kickstart.nvim/issues/218)
+   * [Reorganize init.lua into a multi-file setup](https://github.com/nvim-lua/kickstart.nvim/pull/473)
