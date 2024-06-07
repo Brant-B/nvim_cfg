@@ -1,39 +1,57 @@
--- Make line numbers default
+-- utf8
+vim.g.encoding = "UTF-8"
+vim.o.fileencoding = "utf-8"
+-- 行号显示
 vim.opt.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
+-- 添加相对行号
 vim.opt.relativenumber = true
-
--- Enable mouse mode, can be useful for resizing splits for example!
+-- 显示左侧图标指示列
+vim.wo.signcolumn = "yes"
+-- 右侧参考线，超过表示代码太长了，考虑换行
+vim.wo.colorcolumn = "80"
+-- 使能鼠标
 vim.opt.mouse = "a"
--- Don't show the mode, since it's already in the status line
+-- 禁止创建备份文件
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.swapfile = false
+
+-- 停止显示状态，状态栏已经有了
 vim.opt.showmode = false
-
--- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
+-- 将vim编辑的复制buffer 与OS的复制buffer同步
 vim.opt.clipboard = "unnamedplus"
-
--- Enable break indent
+-- 当一行长度过长时，前端对齐
 vim.opt.breakindent = true
-
--- Save undo history
+-- 关闭了vim之后，依然能undo
 vim.opt.undofile = true
-
--- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
+-- 当忽略大小写时，直接输入全小写
+-- 当输入了大写字母时，不忽略大小写
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
--- Keep signcolumn on by default
+-- 设置了标记列的内容
 vim.opt.signcolumn = "yes"
-
 -- Decrease update time
 vim.opt.updatetime = 250
-
--- Decrease mapped sequence wait time
 -- Displays which-key popup sooner
 vim.opt.timeoutlen = 300
-
 -- Configure how new splits should be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+-- 命令行高为2，提供足够的显示空间
+vim.o.cmdheight = 2
+-- 当文件被外部程序修改时，自动加载
+vim.o.autoread = true
+vim.bo.autoread = true
+-- 新行对齐当前行
+vim.o.autoindent = true
+vim.bo.autoindent = true
+vim.o.smartindent = true
+-- 设置如何展示不可见字符
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+-- Preview substitutions live, as you type!
+vim.opt.inccommand = "split"
+-- 高亮光标所在行
+vim.opt.cursorline = true
+-- 光标移动时，上下方的最小行数
+vim.opt.scrolloff = 10
