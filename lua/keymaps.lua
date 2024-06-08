@@ -1,3 +1,6 @@
+-- 设置参数
+local map = vim.api.nvim_set_keymap
+local opt = { noremap = true, silent = true }
 -- 设置 <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: 必须在插件应用之前声明
@@ -27,3 +30,23 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+-- Terminal 相关
+map("n", "<leader>t", ":sp | terminal<CR>", opt)
+map("t", "<Esc>", "<C-\\><C-n>", opt)
+
+-- [[ Visual 模式快捷键]]
+
+-- visual模式下缩进代码
+map("v", "<", "<gv", opt)
+map("v", ">", ">gv", opt)
+-- 上下移动选中文本
+map("v", "J", ":move '>+1<CR>gv-gv", opt)
+map("v", "K", ":move '<-2<CR>gv-gv", opt)
+
+-- 上下滚动浏览
+map("n", "<C-j>", "10j", opt)
+map("n", "<C-k>", "10k", opt)
+
+-- 退出
+map("n", "q", ":q<CR>", opt)
+map("n", "qq", ":q!<CR>", opt)
