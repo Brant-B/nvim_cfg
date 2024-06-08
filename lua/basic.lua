@@ -1,3 +1,6 @@
+-- 设置字体
+vim.g.have_nerd_font = true
+
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
@@ -34,7 +37,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 250
 -- Displays which-key popup sooner
 vim.opt.timeoutlen = 300
--- Configure how new splits should be opened
+-- 新窗口被创建的位置，出现在右边和下边
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 -- 命令行高为2，提供足够的显示空间
@@ -49,7 +52,7 @@ vim.o.smartindent = true
 -- 设置如何展示不可见字符
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
--- Preview substitutions live, as you type!
+-- 实时预览替换的效果
 vim.opt.inccommand = "split"
 -- 高亮光标所在行
 vim.opt.cursorline = true
