@@ -6,8 +6,7 @@ local opt = { noremap = true, silent = true }
 --  NOTE: 必须在插件应用之前声明
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
--- Set highlight on search,
--- 通过 按下 <Esc> in normal mode 清除高亮
+-- 搜索高亮， 通过按下 <Esc> in normal mode 清除高亮
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- 诊断信息跳转快捷键
@@ -20,9 +19,8 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.highlight.on_yank()`
+-- 将复制时的文本部分进行高亮
+-- `yap` 复制当前段， TODO: 怎么理解段的概念
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),

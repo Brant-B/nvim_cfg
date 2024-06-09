@@ -1,3 +1,4 @@
+-- TODO: 这个插件是用来使用snippet的，那么应该怎么维护自己需要的snippet呢？
 return {
 	{ -- 自动补全
 		"hrsh7th/nvim-cmp",
@@ -42,7 +43,8 @@ return {
 					end,
 				},
 				completion = { completeopt = "menu,menuone,noinsert" },
-				-- 为了更好的理解为什么选择了这些快捷键被选中
+
+				-- 为了更好的理解为什么选择了以下这些快捷键被选中
 				-- 需要阅读 `help ins-completion`
 				mapping = cmp.mapping.preset.insert({
 					-- Select the [n]ext item
