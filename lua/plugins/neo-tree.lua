@@ -1,5 +1,5 @@
--- Neo-tree is a Neovim plugin to browse the file system
--- https://github.com/nvim-neo-tree/neo-tree.nvim
+-- 文件侧边栏
+-- 记住快捷键 `\`，只用按以下
 
 return {
   'nvim-neo-tree/neo-tree.nvim',

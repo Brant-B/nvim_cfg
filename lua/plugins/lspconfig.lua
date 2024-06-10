@@ -1,6 +1,6 @@
 return {
   { -- LSP 插件配置
-    'neovim/nvim-lspconfig',
+    'neovim/nvim-lspconfig', -- 代表要安装该插件
     dependencies = {
       -- 自动下载LSPs和相关工具到Neovim的标准路径
       { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
@@ -13,7 +13,7 @@ return {
       -- used for completion, annotations and signatures of Neovim apis
       { 'folke/neodev.nvim', opts = {} },
     },
-    config = function()
+    config = function() -- 表示安装的自定义配置过程
 		-- NOTE: **啥是LSP呀?**
 			-- LSP可能是一个你听过的缩写，但是并不知道具体是什么。
 			-- LSP 表示 Language server protocol, 语言服务协议，也就是说，它是一个帮助
@@ -35,11 +35,7 @@ return {
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
         callback = function(event)
-          -- NOTE: Remember that Lua is a real programming language, and as such it is possible
-          -- to define small helper and utility functions so you don't have to repeat yourself.
-          --
-          -- In this case, we create a function that lets us more easily define mappings specific
-          -- for LSP related items. It sets the mode, buffer and description for us each time.
+          -- 在下面我们定义了一个函数，用于帮助定义快捷键
           local map = function(keys, func, desc)
             vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
           end
@@ -81,8 +77,8 @@ return {
           --  See `:help K` for why this keymap.
           map('K', vim.lsp.buf.hover, 'Hover Documentation')
 
-          -- WARN: This is not Goto Definition, this is Goto Declaration.
-          --  For example, in C this would take you to the header.
+          -- WARN: D 在这里表示声明
+          --  例如在C语言中，它会跳转到头文件中
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
           -- The following two autocommands are used to highlight references of the
@@ -201,5 +197,4 @@ return {
         },
       }
     end,
-  },
-}
+  }, }

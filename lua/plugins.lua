@@ -16,10 +16,9 @@ require("lazy").setup({
 	require("plugins/gitsigns"), -- 用来添加git 相关信息到编辑器中 TODO: 不知道怎么用
 	require("plugins/indent_line"), -- 相同缩进有一条线
 	require("plugins/lint"), -- 静态代码分析
-	require("plugins/lspconfig"), -- 自动补全和悬浮显示功能
-	require("plugins/mini"), -- TODO: 不知道干什么的
-			
-	require("plugins/neo-tree"), -- 文件侧边栏
+	require("plugins/lspconfig"), -- LSP配置，变量跳转
+	require("plugins/mini"), -- 小工具集合
+	require("plugins/neo-tree"), -- 文件侧边栏 \
 	require("plugins/telescope"), -- 模糊搜索器
 	require("plugins/todo-comments"), -- 高亮待处理事项
 	require("plugins/tokyonight"), -- 东京夜，色彩风格
