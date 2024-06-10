@@ -5,7 +5,6 @@ require("lazy").setup({
 	-- 第一个参数表示链接，关键字用来配置插件的行为
 	-- `opts = {}` 用来强制一个插件必须加载
 
-	--{ "tpope/vim-sleuth", opts = {} }, -- 智能检测tab长度，并做设置 FIXME: 会跟手动设置发生冲突
 	{ "numToStr/Comment.nvim", opts = {} }, -- 将选中部分做注释
 	-- NOTE: 2. 插件可以通过`require` 的方式添加
 	-- `opts = {}` is the same as calling `require('fidget').setup({})`
@@ -24,4 +23,5 @@ require("lazy").setup({
 	require("plugins/tokyonight"), -- 东京夜，色彩风格
 	require("plugins/treesitter"), -- 代码解析器
 	require("plugins/which-key"), -- 快捷键提示工具
+	require("plugins/alpha-nvim"), -- 初始化界面
 })
