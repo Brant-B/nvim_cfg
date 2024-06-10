@@ -14,26 +14,19 @@ return {
       { 'folke/neodev.nvim', opts = {} },
     },
     config = function()
-      -- NOTE: **啥是LSP呀?**
-      -- LSP is an initialism you've probably heard, but might not understand what it is.
-      -- LSP stands for Language Server Protocol. It's a protocol that helps editors
-      -- and language tooling communicate in a standardized fashion.
-      -- In general, you have a "server" which is some tool built to understand a particular
-      -- language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc.). These Language Servers
-      -- (sometimes called LSP servers, but that's kind of like ATM Machine) are standalone
-      -- processes that communicate with some "client" - in this case, Neovim!
-      -- LSP provides Neovim with features like:
-      --  - Go to definition
-      --  - Find references
-      --  - Autocompletion
-      --  - Symbol Search
-      --  - and more!
-      --
-      -- Thus, Language Servers are external tools that must be installed separately from
-      -- Neovim. This is where `mason` and related plugins come into play.
-      --
-      -- If you're wondering about lsp vs treesitter, you can check out the wonderfully
-      -- and elegantly composed help section, `:help lsp-vs-treesitter`
+		-- NOTE: **啥是LSP呀?**
+			-- LSP可能是一个你听过的缩写，但是并不知道具体是什么。
+			-- LSP 表示 Language server protocol, 语言服务协议，也就是说，它是一个帮助
+			-- 编辑者和语言规范中间交流的一层协议。
+			-- 普遍来讲，server是一些内建的工具，它是可以理解特定的语言。
+			-- 这些 language server 是独立的进程，可以和Neovim相互通信。
+			-- 提供以下的特性：
+				-- 转到定义处 TODO:怎么用
+				-- 找到引用 TODO:怎么用
+				-- 智能补全
+				-- 符号搜索
+			-- 所以LS 是独立于Neovim的独立工具，必须额外下载。
+			-- 接下来安装`mason` 和相关的插件。
 
       --  This function gets run when an LSP attaches to a particular buffer.
       --    That is to say, every time a new file is opened that is associated with
