@@ -66,3 +66,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 -- 光标移动时，上下方的最小行数
 vim.opt.scrolloff = 10
+-- 设置折叠
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = true

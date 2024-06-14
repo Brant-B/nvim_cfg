@@ -48,3 +48,5 @@ map("n", "<C-k>", "10k", opt)
 map("n", "q", ":q<CR>", opt)
 map("n", "qq", ":q!<CR>", opt)
 map("n", "Q", ":qa!<CR>", opt)
+-- 折叠代码
+map("n", ";", ":za<CR>", opt)
