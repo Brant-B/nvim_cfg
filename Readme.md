@@ -36,3 +36,4 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
 [The Only Video You Need to Get Started with Neovim](https://youtu.be/m8C0Cq9Uv9o)
 
+## 
