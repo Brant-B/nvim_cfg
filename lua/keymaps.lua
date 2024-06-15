@@ -1,4 +1,7 @@
 -- 设置参数
+local nmap = function(key, effect, desc)
+  vim.keymap.set('n', key, effect, { silent = true, noremap = true, desc = desc })
+end
 local map = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
 -- 设置 <space> as the leader key
@@ -18,7 +21,7 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagn
 --  See `:help lua-guide-autocommands`
 
 -- 将复制时的文本部分进行高亮
--- `yap` 复制当前段， TODO: 怎么理解段的概念
+-- `yap` 复制当前段
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
@@ -45,4 +48,4 @@ map("n", "<C-k>", "10k", opt)
 map("n", "q", ":q<CR>", opt)
 map("n", "qq", ":q!<CR>", opt)
 -- 折叠代码
-map("n", "zz", "za", opt)
+map("n", "<CR>", "za", opt)

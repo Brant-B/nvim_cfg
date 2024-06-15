@@ -23,5 +23,4 @@ require("lazy").setup({
 	require("plugins/tokyonight"), -- 东京夜，色彩风格
 	require("plugins/treesitter"), -- 代码解析器
 	require("plugins/which-key"), -- 快捷键提示工具
-
 })
