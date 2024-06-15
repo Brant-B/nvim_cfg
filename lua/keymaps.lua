@@ -12,8 +12,6 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- 诊断信息跳转快捷键
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 --  See `:help wincmd` for a list of all window commands--  感觉在编辑器里面，多窗口是伪需求，可以用tmux，可以多个标签页
 
 -- [[ Basic Autocommands ]]
@@ -28,8 +26,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
--- Terminal 相关
-map("n", "<leader>t", ":sp | terminal<CR>", opt)
+-- Terminal 相关 map("n", "<leader>t", ":sp | terminal<CR>", opt)
 map("t", "<Esc>", "<C-\\><C-n>", opt)
 
 -- [[ Visual 模式快捷键]]
