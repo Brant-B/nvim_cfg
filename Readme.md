@@ -36,4 +36,14 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
 [The Only Video You Need to Get Started with Neovim](https://youtu.be/m8C0Cq9Uv9o)
 
-## 
+## 概念
+
+在nvim中，打开的每个文件都属于一个buffer
+
+## 快捷键
+
+|快捷键|对应功能|对应命令|常用程度|
+|------|--------|------|--------|
+|`<leader><space>`|在当前文件夹搜索文件名|:Telescope find_files <CR>| !!!|
+|`<leader>o`|打开最近使用的文件|:Telescope oldfiles|!|
+|`<leader>g`|在当前文件夹搜索符号|:Telescope live_grep|!!!|
