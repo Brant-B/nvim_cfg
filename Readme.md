@@ -43,7 +43,10 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 ## 快捷键
 
 |快捷键|对应功能|对应命令|常用程度|
-|------|--------|------|--------|
-|`<leader><space>`|在当前文件夹搜索文件名|:Telescope find_files <CR>| !!!|
+|------|--------|------|----------|
+|`<leader><space>`|在当前文件夹搜索文件名|:Telescope find_files <CR>|!!!|
 |`<leader>o`|打开最近使用的文件|:Telescope oldfiles|!|
 |`<leader>g`|在当前文件夹搜索符号|:Telescope live_grep|!!!|
+|`Z`|将折叠光标位置代码|还是没找到合适的按键|!!|
+|`\\`|打开关闭文件树|: Neotree|!!!|
+|`\|`|打开关闭文件大纲|: Outline|!!!|
