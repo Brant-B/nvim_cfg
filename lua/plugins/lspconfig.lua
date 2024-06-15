@@ -3,7 +3,7 @@ return {
     'neovim/nvim-lspconfig', -- 代表要安装该插件
     dependencies = {
       -- 自动下载LSPs和相关工具到Neovim的标准路径
-      { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
+      {'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
       'williamboman/mason-lspconfig.nvim', 'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Useful status updates for LSP.
@@ -11,51 +11,19 @@ return {
       { 'folke/neodev.nvim', opts = {} },
     },
     config = function() -- 表示安装的自定义配置过程
-		-- NOTE: **LSP是啥**
-			-- LSP可能是一个你听过的缩写，但是并不知道具体是什么。
-			-- LSP 表示 Language server protocol, 语言服务协议，也就是说，它是一个帮助
-			-- 编辑者和语言规范中间交流的一层协议。
-			-- 普遍来讲，server是一些内建的工具，它是可以理解特定的语言。
-			-- 这些 language server 是独立的进程，可以和Neovim相互通信。
-			-- 提供以下的特性：
-				-- 转到定义处 TODO:怎么用
-				-- 找到引用 TODO:怎么用
-				-- 智能补全
-				-- 符号搜索
-			-- 所以LS 是独立于Neovim的独立工具，必须额外下载。
-			-- 接下来安装`mason` 和相关的插件。
 
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
         callback = function(event)
-          -- 在下面我们定义了一个函数，用于帮助定义快捷键
           local map = function(keys, func, desc)
             vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
           end
 
-          -- Jump to the definition of the word under your cursor.
-          --  This is where a variable was first declared, or where a function is defined, etc.
-          --  To jump back, press <C-t>.
           map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-
-          -- Find references for the word under your cursor.
           map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-
-          -- Jump to the implementation of the word under your cursor.
-          --  Useful when your language has ways of declaring types without an actual implementation.
           map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-
-          -- WARN: D 在这里表示声明
-          --  例如在C语言中，它会跳转到头文件中
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-
-          -- Rename the variable under your cursor.
-          --  Most Language Servers support renaming across files, etc.
           map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
-
-
-          -- Opens a popup that displays documentation about the word under your cursor
-          --  See `:help K` for why this keymap.
           map('K', vim.lsp.buf.hover, 'Hover Documentation')
 
           -- The following two autocommands are used to highlight references of the

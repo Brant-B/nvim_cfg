@@ -55,6 +55,6 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
  TODO :
 
-文件跳转
-
-LSP配置
+- 文件跳转
+- LSP配置
+- 多标签页

@@ -26,9 +26,10 @@ return {
 				},
 			},
 			"saadparwaiz1/cmp_luasnip",
-			-- 添加其他补全能力的插件
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-cmdline",
 		},
 		config = function()
 			-- See `:help cmp`
@@ -44,8 +45,7 @@ return {
 				},
 				completion = { completeopt = "menu,menuone,noinsert" },
 
-				-- 为了更好的理解为什么选择了以下这些快捷键被选中
-				-- 需要阅读 `help ins-completion`
+				-- 阅读 `help ins-completion`
 				mapping = cmp.mapping.preset.insert({
 					-- Select the [n]ext item
 					["<C-n>"] = cmp.mapping.select_next_item(),
