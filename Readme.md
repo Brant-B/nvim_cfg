@@ -47,7 +47,7 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 |`<leader><space>`|在当前文件夹搜索文件名|:Telescope find_files <CR>|!!!|
 |`<leader>o`|打开最近使用的文件|:Telescope oldfiles|!|
 |`<leader>g`|在当前文件夹搜索符号|:Telescope live_grep|!!!|
-|`zz`|将折叠光标位置代码|zz本来不太需要|!!|
+|`<CR>`|将折叠光标位置代码|谁用vim还用回车呀|!!|
 |`\\`|打开关闭文件树|: Neotree|!!!|
 |`\|`|打开关闭文件大纲|: Outline|!!!|
 
