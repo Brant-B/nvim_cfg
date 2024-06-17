@@ -13,6 +13,7 @@ require("lazy").setup({
 	require("plugins/indent_line"), -- 相同缩进有一条线
 	require("plugins/lint"), -- 静态代码分析
 	require("plugins/lspconfig"), -- LSP配置，变量跳转
+	require("plugins/lualine"), -- 状态栏设置
 	require("plugins/mini"), -- 小工具集合
 	require("plugins/neo-tree"), -- 文件侧边栏
 	require("plugins/outline_nvim"), -- 文件大纲
