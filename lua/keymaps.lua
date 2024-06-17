@@ -42,8 +42,8 @@ map("v", "J", ":move '>+1<CR>gv-gv", opt)
 map("v", "K", ":move '<-2<CR>gv-gv", opt)
 
 -- 上下滚动浏览
-map("n", "<C-j>", "10j", opt)
-map("n", "<C-k>", "10k", opt)
+map("n", "<C-j>", "4j", opt)
+map("n", "<C-k>", "4k", opt)
 -- 退出
 map("n", "q", ":q<CR>", opt)
 map("n", "qq", ":q!<CR>", opt)

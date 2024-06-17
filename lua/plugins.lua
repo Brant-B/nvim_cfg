@@ -17,7 +17,7 @@ require("lazy").setup({
 	require("plugins/lspconfig"), -- LSP配置，变量跳转
 	require("plugins/mini"), -- 小工具集合
 	require("plugins/neo-tree"), -- 文件侧边栏
-	require("plugins/outline_nvim"), -- 文件侧边栏
+	require("plugins/outline_nvim"), -- 文件大纲
 	require("plugins/telescope"), -- 模糊搜索器
 	require("plugins/todo-comments"), -- 高亮待处理事项
 	require("plugins/tokyonight"), -- 东京夜，色彩风格

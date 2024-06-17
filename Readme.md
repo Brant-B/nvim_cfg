@@ -57,3 +57,6 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
 - LSP配置
     - 文件跳转
+- LSP 不要报错，我现在不要lsp报错
+- 增加nvim自动同步外部的修改，？（有必要吗？）
+- 增加只读模式？（有必要吗？）
