@@ -1,5 +1,3 @@
--- NOTE: 这里就是安装插件的位置
-
 require("lazy").setup({
 	-- NOTE: 1. 插件可以通过表格的方式添加
 	-- 第一个参数表示链接，关键字用来配置插件的行为
@@ -20,7 +18,7 @@ require("lazy").setup({
 	require("plugins/outline_nvim"), -- 文件大纲
 	require("plugins/telescope"), -- 模糊搜索器
 	require("plugins/todo-comments"), -- 高亮待处理事项
-	require("plugins/tokyonight"), -- 东京夜，色彩风格
+	require("plugins/tokyonight"), -- 色彩风格
 	require("plugins/treesitter"), -- 代码解析器
 	require("plugins/which-key"), -- 快捷键提示工具
 })

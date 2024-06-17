@@ -1,4 +1,3 @@
--- 文件侧边栏
 -- 记住快捷键 `\`，只用按以下
 
 return {
@@ -22,4 +21,15 @@ return {
       },
     },
   },
+	git = {
+		enable = true,
+},
+	view = {
+	-- 文件浏览器展示位置，左侧：left, 右侧：right
+	side = "left",
+	-- 行号是否显示
+	number = false,
+	relativenumber = false,
+	width = 30,
+},
 }
