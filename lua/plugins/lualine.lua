@@ -1,5 +1,6 @@
-return {
-	"nvim-lualine/lualine.nvim",
+return{
+	'nvim-lualine/lualine.nvim',
+	dependencies = { 'nvim-tree/nvim-web-devicons' },
 	options = {
 		theme = "auto",
 		component_separators = { left = "", right = "" },
