@@ -64,3 +64,4 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 - 增加对snippets的了解
 - 增加对按键的配置的管理，全部都放到keysmap里面？（有必要吗）
     - 将确定以及肯定用的功能加入keysmap
+    - 对keysmap进行改造

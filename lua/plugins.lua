@@ -23,6 +23,7 @@ require("lazy").setup({
 	require("plugins/treesitter"), -- 代码解析器
 	require("plugins/which-key"), -- 快捷键提示工具
 })
+
 local status, lualine = pcall(require, "lualine")
 if not status then
 	vim.notify("没有找到 lualine")
@@ -55,9 +56,7 @@ lualine.setup({
 			"diff",
 		},
 		lualine_x = {},
-
 		lualine_y = {},
-
 		lualine_z = {
 			"progress",
 		},

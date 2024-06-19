@@ -49,6 +49,9 @@ map("n", "q", ":q<CR>", opt)
 map("n", "qq", ":q!<CR>", opt)
 -- 折叠代码
 map("n", "<CR>", "za", opt)
+
+--[[插件快捷键]]
+
 -- bufferline
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
