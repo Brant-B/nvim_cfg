@@ -44,7 +44,7 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
 |快捷键|对应功能|对应命令|常用程度|
 |------|--------|------|----------|
-|`<leader><space>`|在当前文件夹搜索文件名| Telescope find_files <CR>|!!!|
+|`<leader><space>`|在当前文件夹搜索文件名|Telescope find_files <CR>|!!!|
 |`<leader>o`|打开最近使用的文件|:Telescope oldfiles|!|
 |`<leader>g`|在当前文件夹搜索符号|:Telescope live_grep|!!!|
 |`<CR>`|将折叠光标位置代码|谁用vim还用回车呀|!!|
@@ -53,15 +53,12 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
 ## 待增加功能
 
- TODO :
-
-- LSP配置
-    - 文件跳转
-- LSP 不要报错，我现在不要lsp报错
-- 增加nvim自动同步外部的修改，？（有必要吗？）
 - 增加只读模式？（有必要吗？）
-- 增加对状态栏的修饰 lualine
-- 增加对snippets的了解
 - 增加对按键的配置的管理，全部都放到keysmap里面？（有必要吗）
-    - 将确定以及肯定用的功能加入keysmap
-    - 对keysmap进行改造
+    - 将确定以及肯定用的功能加入keysmap  
+    - 对keysmap进行改造  
+- 当前nvim 还是有一些错误存在，要改正屌
+- 对LSP要做适用化设计
+    - LSP 不要报错，我现在不要lsp报错
+    - cmp 之中 增加对snippets的了解
+- 插件管理做统一
