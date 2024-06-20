@@ -1,4 +1,3 @@
--- TODO: 这个插件是用来使用snippet的，那么应该怎么维护自己需要的snippet呢？
 return {
 	{ -- 自动补全
 		"hrsh7th/nvim-cmp",
