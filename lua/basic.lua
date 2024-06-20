@@ -24,10 +24,12 @@ vim.o.tabstop = 4
 vim.bo.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftround = true
-
 -- >> << 时移动长度
 vim.o.shiftwidth = 4
 vim.bo.shiftwidth = 4
+-- 空格替代tab
+vim.o.expandtab = true
+vim.bo.expandtab = true
 -- 停止显示状态，状态栏已经有了
 vim.opt.showmode = false
 -- 将vim编辑的复制buffer 与OS的复制buffer同步
