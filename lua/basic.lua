@@ -1,12 +1,10 @@
 -- 设置字体
 vim.g.have_nerd_font = true
-
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
--- 行号显示
+-- 使用相对行号
 vim.opt.number = true
--- 添加相对行号
 vim.opt.relativenumber = true
 -- 显示左侧图标指示列
 vim.wo.signcolumn = "yes"
@@ -18,7 +16,6 @@ vim.opt.mouse = "a"
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
-
 -- 缩进4个空格等于一个Tab
 vim.o.tabstop = 4
 vim.bo.tabstop = 4
@@ -42,6 +39,10 @@ vim.opt.undofile = true
 -- 当输入了大写字母时，不忽略大小写
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+-- 禁止折行
+vim.wo.wrap = true
+-- 光标在行首尾时<Left><Right>可以跳到下一行
+vim.o.whichwrap = "<,>,[,]"
 -- 设置了标记列的内容
 vim.opt.signcolumn = "yes"
 -- Decrease update time
@@ -67,12 +68,17 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split"
 -- 高亮光标所在行
 vim.opt.cursorline = true
--- 光标移动时，上下方的最小行数
+-- 光标移动时，上下左右的最小显示区域
 vim.opt.scrolloff = 10
+vim.o.sidescrolloff = 8
 -- 设置折叠
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false
 vim.opt.foldlevel = 99
 -- bufferline
+vim.opt.termguicolors = true
+-- 样式
+vim.o.background = "dark"
+vim.o.termguicolors = true
 vim.opt.termguicolors = true

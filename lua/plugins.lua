@@ -1,13 +1,19 @@
 require("lazy").setup({
-	-- NOTE: 1. 插件可以通过表格的方式添加
-	-- 第一个参数表示链接，关键字用来配置插件的行为
-	-- `opts = {}` 用来强制一个插件必须加载
-	{ "numToStr/Comment.nvim", opts = {}}, -- 将选中部分做注释
-	{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons',opts = {}},
-	{'nvim-lualine/lualine.nvim',dependencies = { 'nvim-tree/nvim-web-devicons' },opts = {}},
-	-- NOTE: 2. 插件可以通过`require` 的方式添加
-	-- `opts = {}` is the same as calling `require('fidget').setup({})`
+    -- theme
+	require("plugins/tokyonight"), -- 色彩风格
 	require("plugins/alpha-nvim"), -- 初始化界面
+	"rcarriga/nvim-notify",
+	"nvim-lua/lsp-status.nvim",
+	"petertriho/nvim-scrollbar",
+    -- file tree
+	require("plugins/neo-tree"), -- 文件侧边栏
+	require("plugins/outline_nvim"), -- 文件大纲
+	{'nvim-lualine/lualine.nvim',dependencies = { 'nvim-tree/nvim-web-devicons' },opts = {}},
+	{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons',opts = {}},
+	{ "arkav/lualine-lsp-progress" },
+	-- git
+	"lewis6991/gitsigns.nvim",
+
 	require("plugins/autopairs"), -- 自动括号
 	require("plugins/cmp"), -- 自动补全工具
 	require("plugins/gitsigns"), -- 用来添加git 相关信息到编辑器中
@@ -15,11 +21,8 @@ require("lazy").setup({
 	require("plugins/lint"), -- 静态代码分析
 	require("plugins/lspconfig"), -- LSP配置，变量跳转
 	require("plugins/mini"), -- 小工具集合
-	require("plugins/neo-tree"), -- 文件侧边栏
-	require("plugins/outline_nvim"), -- 文件大纲
 	require("plugins/telescope"), -- 模糊搜索器
 	require("plugins/todo-comments"), -- 高亮待处理事项
-	require("plugins/tokyonight"), -- 色彩风格
 	require("plugins/treesitter"), -- 代码解析器
 	require("plugins/which-key"), -- 快捷键提示工具
 })
