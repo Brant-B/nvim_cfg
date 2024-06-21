@@ -62,3 +62,6 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
     - LSP 不要报错，我现在不要lsp报错
     - cmp 之中 增加对snippets的了解
 - 插件管理做统一
+
+tnnd，改了之后，我现在使用vim是没有LSP的，很难受。
+增加优先度。
