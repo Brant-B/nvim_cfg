@@ -15,7 +15,7 @@ return{
     dashboard.section.header.val = vim.split(logo, "\n")
     dashboard.section.buttons.val = {
       dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
-      dashboard.button("o", " " .. " Old files", ":Telescope oldfiles <CR>"),
+      dashboard.button("o", "O" .. " Old files", ":Telescope oldfiles <CR>"),
       dashboard.button("g", " " .. " Grep text", ":Telescope live_grep <CR>"),
       dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
       dashboard.button("l", "󰒲 " .. " Lazy", ":Lazy<CR>"),

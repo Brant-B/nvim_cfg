@@ -12,6 +12,7 @@ require("plugins")
 require("plugin_config.notify")
 require("plugin_config.lualine")
 require("plugin_config.bufferline")
+require("plugin_config.copilot")
 
 -- [[LSP]]
 require("lsp.setup")

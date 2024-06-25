@@ -103,8 +103,9 @@ nvim_lsp.lua_ls.setup({
 
 nvim_lsp.clangd.setup({
     cmd = {
-    "clangd",
-    "--query-driver=*arm-none-eabi*",
+        "clangd",
+        "--query-driver=*arm-none-eabi*",
     },
-  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" }
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+  single_file_support = true,
 })

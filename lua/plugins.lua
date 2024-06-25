@@ -40,5 +40,5 @@ require("lazy").setup({
 	require("plugin_config.todo-comments"), -- 高亮待处理事项
 	require("plugin_config.treesitter"), -- 代码解析器
 	require("plugin_config.which-key"), -- 快捷键提示工具
-	-- require("plugin_config.lspconfig"), -- LSP配置，变量跳转
+    "zbirenbaum/copilot.lua",
 })
