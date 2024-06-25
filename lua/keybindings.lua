@@ -50,7 +50,7 @@ map("n", "<CR>", "za", opt)
 -- bufferline
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
-map("n", "<C-w>", ":Bdelete!<CR>", opt)
+map("n", "W", ":Bdelete!<CR>", opt)
 
 -- 插件快捷键
 local pluginKeys = {}

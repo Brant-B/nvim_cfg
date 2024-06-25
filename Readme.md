@@ -65,3 +65,4 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
 tnnd，改了之后，我现在使用vim是没有LSP的，很难受。
 增加优先度。
+- 如果能将copilot 集成到vim中，完全就可以抛弃vscode了

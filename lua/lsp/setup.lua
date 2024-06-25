@@ -1,7 +1,7 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
 	automatic_installation = true,
-	ensure_installed = { "lua_ls", "rust_analyzer" },
+	ensure_installed = { "lua_ls", "clangd" },
 })
 
 function LspKeybind(client, bufnr)
@@ -72,8 +72,8 @@ function GoLspKeybind(client, bufnr)
 	require("keybindings").mapLSP(buf_set_keymap)
 end
 local nvim_lsp = require("lspconfig")
--- lua
--- mason.lua
+
+-- lua_ls
 nvim_lsp.lua_ls.setup({
 	on_init = function(client)
 		local path = client.workspace_folders[1].name
@@ -101,66 +101,10 @@ nvim_lsp.lua_ls.setup({
 	on_attach = LspKeybind,
 })
 
--- rust_analyzer
-
-nvim_lsp.rust_analyzer.setup({
-	settings = {
-		["rust-analyzer"] = {
-			imports = {
-				granularity = {
-					group = "module",
-				},
-				prefix = "self",
-			},
-			cargo = {
-				buildScripts = {
-					enable = true,
-				},
-			},
-			procMacro = {
-				enable = true,
-			},
-		},
-	},
-	on_attach = LspKeybind,
-})
-
--- go
-local util = require("lspconfig/util")
-
-nvim_lsp.gopls.setup({
-	cmd = { "gopls", "serve" },
-	filetypes = { "go", "gomod" },
-	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
-	settings = {
-		gopls = {
-			analyses = {
-				unusedparams = true,
-			},
-			staticcheck = true,
-		},
-		semanticTokens = true,
-	},
-	on_attach = GoLspKeybind,
-})
-
--- astro
-nvim_lsp.astro.setup({
-	on_attach = LspKeybind,
-})
-
-nvim_lsp.tsserver.setup({
-	on_attach = LspKeybind,
-	filetypes = { "javascript", "typescript", "typescriptreact", "typescript.tsx" },
-})
-
--- tailwindcss
-nvim_lsp.tailwindcss.setup({})
-
-nvim_lsp.pyright.setup({
-	on_attach = LspKeybind,
-})
-
-nvim_lsp.marksman.setup({
-	on_attach = LspKeybind,
+nvim_lsp.clangd.setup({
+    cmd = {
+    "clangd",
+    "--query-driver=*arm-none-eabi*",
+    },
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" }
 })

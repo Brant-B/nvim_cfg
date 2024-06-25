@@ -9,7 +9,7 @@ require("lazy").setup({
 	require("plugin_config.neo-tree"), -- 文件侧边栏
 	require("plugin_config.outline_nvim"), -- 文件大纲
 	{'nvim-lualine/lualine.nvim',dependencies = { 'nvim-tree/nvim-web-devicons' },opts = {}},
-	{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons',opts = {}},
+	{'akinsho/bufferline.nvim', version = "*", dependencies = {'nvim-tree/nvim-web-devicons',"moll/vim-bbye"},opts = {}},
 	{ "arkav/lualine-lsp-progress" },
     -- telescope
     require("plugin_config.telescope"),
@@ -26,6 +26,7 @@ require("lazy").setup({
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path",
 	"hrsh7th/cmp-cmdline",
+    { "nvimtools/none-ls.nvim", dependencies = "nvim-lua/plenary.nvim" },
     -- LSP
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",

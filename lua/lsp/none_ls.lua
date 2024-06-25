@@ -9,7 +9,7 @@ local formatting = null_ls.builtins.formatting
 null_ls.setup({
 	debug = false,
 	sources = {
-		-- Formatting ---------------------
+		-- Formatting --
 		formatting.shfmt,
 		-- StyLua
 		formatting.stylua,
@@ -18,18 +18,7 @@ null_ls.setup({
 		-- frontend
 		formatting.prettier.with({
 			filetypes = {
-				"javascript",
-				"javascriptreact",
-				"typescript",
-				"typescriptreact",
-				"vue",
-				"css",
-				"scss",
-				"less",
-				"html",
 				"json",
-				"yaml",
-				"graphql",
 				"astro",
 				"markdown",
 			},
@@ -37,10 +26,4 @@ null_ls.setup({
 			prefer_local = "node_modules/.bin",
 		}),
 	},
-	-- 保存自动格式化
-	-- on_attach = function(client)
-	-- 	-- if client.server_capabilities.documentFormattingProvider then
-	-- 	--	vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format{ async = true}")
-	-- 	-- end
-	-- end,
 })
