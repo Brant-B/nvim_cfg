@@ -41,4 +41,19 @@ require("lazy").setup({
 	require("plugin_config.treesitter"), -- 代码解析器
 	require("plugin_config.which-key"), -- 快捷键提示工具
     "zbirenbaum/copilot.lua",
+    {
+        "zbirenbaum/copilot-cmp",
+        event = "InsertEnter",
+        config = function () require("copilot_cmp").setup() end,
+        dependencies = {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        config = function()
+            require("copilot").setup({
+            suggestion = { enabled = false },
+            panel = { enabled = false },
+            })
+        end,
+        },
+    },
 })
