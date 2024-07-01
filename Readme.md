@@ -57,5 +57,8 @@ Use `:Lazy` to view current plugin status. Hit `q` to close the window.
   - 将确定以及肯定用的功能加入keysmap
 - 对LSP要做适用化设计
   - LSP 不要报错，我现在不要lsp报错
+  - 或者实现clangd 实现可以解析头文件 bear 什么的
+  - compile_commands.json
 - 如果能将copilot 集成到vim中，完全就可以抛弃vscode了
   - 安装成功了，但具体怎么用还不清楚
+- 如何实现后退的操作?
